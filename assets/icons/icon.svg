@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="NoxaPlus Tech News">
+  <rect width="512" height="512" rx="112" fill="#12130f"/>
+  <rect x="150" y="146" width="46" height="220" fill="#d8ff3e"/>
+  <rect x="316" y="146" width="46" height="220" fill="#d8ff3e"/>
+  <polygon points="150,146 196,146 362,366 316,366" fill="#d8ff3e"/>
+  <rect x="340" y="112" width="46" height="46" fill="#2b4bff"/>
+</svg>

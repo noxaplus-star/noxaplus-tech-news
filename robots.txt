@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /search.html
+Disallow: /bookmarks.html
+
+Sitemap: https://noxaplus-star.github.io/noxaplus-tech-news/sitemap.xml

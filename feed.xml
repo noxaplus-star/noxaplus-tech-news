@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>NoxaPlus Tech News</title>
+    <link>https://noxaplus-star.github.io/noxaplus-tech-news/</link>
+    <description>A bilingual technology newsroom about the systems, devices, and ideas that will still matter next year.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Nov 2026 12:00:00 GMT</lastBuildDate>
+    <generator>NoxaPlus Tech News static generator</generator>
+    <atom:link href="https://noxaplus-star.github.io/noxaplus-tech-news/feed.xml" rel="self" type="application/rss+xml"/>
+    <copyright>© 2026 NoxaPlus. Stories are editorial demo samples under the MIT license.</copyright>
+    <item>
+      <title>The small-model revolution: why the best AI of 2026 runs on your desk</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=small-models-big-shift</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=small-models-big-shift</guid>
+      <pubDate>Wed, 11 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Frontier labs still chase scale, but the most useful products of the year prove that a well-tuned three-billion-parameter model can beat a distant giant on cost, privacy, and latency.</description>
+    </item>
+    <item>
+      <title>Local-first is back, and this time it has a business model</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=local-first-business-model</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=local-first-business-model</guid>
+      <pubDate>Tue, 10 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Software</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Offline-first apps used to be an ideological stance. A new generation of sync engines makes them cheaper to build, easier to trust, and surprisingly sellable.</description>
+    </item>
+    <item>
+      <title>The battery is the new benchmark</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=battery-new-benchmark</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=battery-new-benchmark</guid>
+      <pubDate>Sun, 08 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Mobile</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Phone launches still lead with TOPS and megapixels, but the specification that decides whether a device is good is the one you cannot see on a slide: sustained efficiency.</description>
+    </item>
+    <item>
+      <title>The quiet rise of the repairable laptop</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=repairable-laptop</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=repairable-laptop</guid>
+      <pubDate>Fri, 06 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Hardware</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Modular ports, standard screws, documented parts, and batteries you can actually replace are moving from enthusiast projects to mainstream purchasing criteria.</description>
+    </item>
+    <item>
+      <title>Passkeys are winning quietly. The hard part starts now</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=passkeys-hard-part</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=passkeys-hard-part</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Cybersecurity</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Phishing-resistant sign-in is finally normal. The remaining work is account recovery, legacy systems, and the support desk that has to explain it all.</description>
+    </item>
+    <item>
+      <title>Small satellites are turning orbit into a data platform</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=small-satellites-data</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=small-satellites-data</guid>
+      <pubDate>Tue, 03 Nov 2026 08:00:00 GMT</pubDate>
+      <category>Space</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>The launch cost story is familiar. The more interesting shift is on the ground, where automated downlink, cloud processing, and subscription analytics are remaking the economics of Earth observation.</description>
+    </item>
+    <item>
+      <title>Post-quantum cryptography: a practical migration checklist for small teams</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=post-quantum-checklist</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=post-quantum-checklist</guid>
+      <pubDate>Tue, 27 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Cybersecurity</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>You do not need a quantum computer to start. You need an inventory, crypto agility, and a plan for the data that must stay secret for decades.</description>
+    </item>
+    <item>
+      <title>Agents at work: the unglamorous infrastructure that decides who wins</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=agent-infrastructure</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=agent-infrastructure</guid>
+      <pubDate>Thu, 22 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Artificial Intelligence</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>The demo is a model that books a flight. The product is permissions, retries, audit logs, cost controls, and a human who can say no.</description>
+    </item>
+    <item>
+      <title>The return of the boring stack</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=boring-stack-return</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=boring-stack-return</guid>
+      <pubDate>Tue, 20 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Software</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Postgres, server-rendered HTML, a queue, and a monolith are not a compromise anymore. They are a competitive advantage in a world where code is cheap to generate and expensive to understand.</description>
+    </item>
+    <item>
+      <title>Satellite messaging is quietly becoming the new roaming</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=satellite-messaging-roaming</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=satellite-messaging-roaming</guid>
+      <pubDate>Sat, 17 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Mobile</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>Direct-to-cell coverage is moving from emergency novelty to everyday expectation. The technology is impressive; the business model and the spectrum rules are the hard parts.</description>
+    </item>
+    <item>
+      <title>Why lunar software is harder than lunar hardware</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=lunar-software-harder</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=lunar-software-harder</guid>
+      <pubDate>Tue, 13 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Space</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>A lander can be tested in a vacuum chamber. Its software has to survive radiation, communication gaps, dust, and a two-second round trip that makes every remote fix feel like a negotiation.</description>
+    </item>
+    <item>
+      <title>Edge silicon: the chip race moves off the cloud</title>
+      <link>https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=edge-silicon</link>
+      <guid isPermaLink="true">https://noxaplus-star.github.io/noxaplus-tech-news/article.html?slug=edge-silicon</guid>
+      <pubDate>Fri, 09 Oct 2026 08:00:00 GMT</pubDate>
+      <category>Hardware</category>
+      <dc:creator>NoxaPlus Tech News</dc:creator>
+      <description>NPUs are becoming standard equipment, but the winners will be decided by memory bandwidth, thermal design, and whether developers can actually ship to the hardware.</description>
+    </item>
+  </channel>
+</rss>

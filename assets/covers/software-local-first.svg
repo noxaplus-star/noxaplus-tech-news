@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t">
+<title id="t">SOFTWARE cover 09 — NoxaPlus Tech News</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#171006"/>
+    <stop offset="1" stop-color="#241a09"/>
+  </linearGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.1" fill="#f4f1e8" opacity=".12"/>
+  </pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<rect width="1200" height="675" fill="url(#dots)"/>
+<g><rect x="190" y="140" width="660" height="82" rx="6" fill="#b7791f" opacity="0.24"/><rect x="214" y="228" width="612" height="82" rx="6" fill="#b7791f" opacity="0.39"/><rect x="238" y="316" width="564" height="82" rx="6" fill="#b7791f" opacity="0.54"/><rect x="262" y="404" width="516" height="82" rx="6" fill="#b7791f" opacity="0.69"/><rect x="286" y="492" width="468" height="82" rx="6" fill="#7df9ff" opacity="0.84"/><path d="M850 190 L1040 190 L1040 470 L850 470" fill="none" stroke="#f4f1e8" stroke-width="2" opacity=".45"/><circle cx="945.0" cy="330.0" r="22.0" fill="#7df9ff" opacity="0.95"/></g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <text x="70" y="86" fill="#f4f1e8" font-size="20" letter-spacing="5" opacity=".9">NOXAPLUS / SOFTWARE</text>
+  <text x="70" y="120" fill="#7df9ff" font-size="15" letter-spacing="3" opacity=".8">TECH NEWS — 09</text>
+  <text x="1130" y="86" fill="#f4f1e8" font-size="17" letter-spacing="3" text-anchor="end" opacity=".55">2026</text>
+  <text x="1130" y="620" fill="#f4f1e8" font-size="14" letter-spacing="3" text-anchor="end" opacity=".5">EDITORIAL DESK</text>
+</g>
+<rect x="0" y="0" width="1200" height="6" fill="#b7791f"/>
+<rect x="0" y="669" width="1200" height="6" fill="#7df9ff"/>
+</svg>

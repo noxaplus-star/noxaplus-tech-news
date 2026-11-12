@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t">
+<title id="t">HARDWARE cover 11 — NoxaPlus Tech News</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#180b06"/>
+    <stop offset="1" stop-color="#28130a"/>
+  </linearGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.1" fill="#f4f1e8" opacity=".12"/>
+  </pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<rect width="1200" height="675" fill="url(#dots)"/>
+<g><rect x="170" y="220" width="220" height="34" rx="4" fill="#d9480f" opacity="0.9"/><circle cx="420.0" cy="237.0" r="6.0" fill="#f4f1e8" opacity="0.7"/><rect x="230" y="286" width="300" height="24" rx="4" fill="#d9480f" opacity="0.9"/><circle cx="560.0" cy="298.0" r="6.0" fill="#f4f1e8" opacity="0.7"/><rect x="310" y="338" width="250" height="18" rx="4" fill="#ffd60a" opacity="0.9"/><circle cx="590.0" cy="347.0" r="6.0" fill="#f4f1e8" opacity="0.7"/><rect x="210" y="386" width="350" height="40" rx="4" fill="#d9480f" opacity="0.9"/><circle cx="590.0" cy="406.0" r="6.0" fill="#f4f1e8" opacity="0.7"/><rect x="180" y="460" width="230" height="26" rx="4" fill="#d9480f" opacity="0.9"/><circle cx="440.0" cy="473.0" r="6.0" fill="#f4f1e8" opacity="0.7"/><line x1="170.0" y1="210.0" x2="1000.0" y2="210.0" stroke="#f4f1e8" stroke-width="1" opacity="0.18"/><line x1="170.0" y1="272.0" x2="1000.0" y2="272.0" stroke="#f4f1e8" stroke-width="1" opacity="0.18"/><line x1="170.0" y1="334.0" x2="1000.0" y2="334.0" stroke="#f4f1e8" stroke-width="1" opacity="0.18"/><line x1="170.0" y1="396.0" x2="1000.0" y2="396.0" stroke="#f4f1e8" stroke-width="1" opacity="0.18"/><line x1="170.0" y1="458.0" x2="1000.0" y2="458.0" stroke="#f4f1e8" stroke-width="1" opacity="0.18"/><circle cx="940.0" cy="210.0" r="130.0" fill="#d9480f" opacity="0.14"/></g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <text x="70" y="86" fill="#f4f1e8" font-size="20" letter-spacing="5" opacity=".9">NOXAPLUS / HARDWARE</text>
+  <text x="70" y="120" fill="#ffd60a" font-size="15" letter-spacing="3" opacity=".8">TECH NEWS — 11</text>
+  <text x="1130" y="86" fill="#f4f1e8" font-size="17" letter-spacing="3" text-anchor="end" opacity=".55">2026</text>
+  <text x="1130" y="620" fill="#f4f1e8" font-size="14" letter-spacing="3" text-anchor="end" opacity=".5">EDITORIAL DESK</text>
+</g>
+<rect x="0" y="0" width="1200" height="6" fill="#d9480f"/>
+<rect x="0" y="669" width="1200" height="6" fill="#ffd60a"/>
+</svg>

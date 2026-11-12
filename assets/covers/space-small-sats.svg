@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t">
+<title id="t">SPACE cover 07 — NoxaPlus Tech News</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#060f20"/>
+    <stop offset="1" stop-color="#0a1830"/>
+  </linearGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.1" fill="#f4f1e8" opacity=".12"/>
+  </pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<rect width="1200" height="675" fill="url(#dots)"/>
+<g><ellipse cx="600" cy="400" rx="170" ry="54" fill="none" stroke="#f4f1e8" stroke-width="1.6" opacity="0.36" transform="rotate(-18 600 400)"/><ellipse cx="600" cy="400" rx="262" ry="84" fill="none" stroke="#1f6feb" stroke-width="1.6" opacity="0.32499999999999996" transform="rotate(-18 600 400)"/><ellipse cx="600" cy="400" rx="354" ry="114" fill="none" stroke="#f4f1e8" stroke-width="1.6" opacity="0.29" transform="rotate(-18 600 400)"/><ellipse cx="600" cy="400" rx="446" ry="144" fill="none" stroke="#1f6feb" stroke-width="1.6" opacity="0.255" transform="rotate(-18 600 400)"/><ellipse cx="600" cy="400" rx="538" ry="174" fill="none" stroke="#f4f1e8" stroke-width="1.6" opacity="0.21999999999999997" transform="rotate(-18 600 400)"/><ellipse cx="600" cy="400" rx="630" ry="204" fill="none" stroke="#1f6feb" stroke-width="1.6" opacity="0.18499999999999997" transform="rotate(-18 600 400)"/><circle cx="600.0" cy="400.0" r="92.0" fill="#1f6feb" opacity="0.9"/><circle cx="600.0" cy="400.0" r="46.0" fill="#060f20" opacity="1"/><circle cx="731.0" cy="393.5" r="3.9" fill="#f4f1e8" opacity="0.41358425266807897"/><circle cx="135.2" cy="319.6" r="2.8" fill="#f4f1e8" opacity="0.5997040397138336"/><circle cx="1058.2" cy="356.0" r="4.1" fill="#f4f1e8" opacity="0.5328766680322587"/><circle cx="898.0" cy="228.7" r="5.0" fill="#f4f1e8" opacity="0.3843355542165227"/><circle cx="708.3" cy="522.0" r="6.9" fill="#f4f1e8" opacity="0.7061887015588582"/><circle cx="530.3" cy="271.2" r="3.1" fill="#f4f1e8" opacity="0.6569765872787685"/><circle cx="925.3" cy="439.1" r="6.7" fill="#f4f1e8" opacity="0.6266964447801002"/><circle cx="538.7" cy="168.2" r="4.6" fill="#f4f1e8" opacity="0.4113146482850425"/><circle cx="218.4" cy="174.6" r="4.5" fill="#f4f1e8" opacity="0.3216476392932236"/><circle cx="317.3" cy="361.7" r="5.0" fill="#f4f1e8" opacity="0.4260039711254649"/><circle cx="936.9" cy="263.8" r="2.6" fill="#f4f1e8" opacity="0.41075031146174296"/><circle cx="121.8" cy="363.5" r="3.4" fill="#f4f1e8" opacity="0.7973072256427258"/><circle cx="1069.7" cy="181.0" r="3.0" fill="#f4f1e8" opacity="0.7561084149871022"/><circle cx="931.3" cy="491.0" r="5.3" fill="#f4f1e8" opacity="0.4161117232171819"/><circle cx="869.6" cy="282.5" r="5.7" fill="#f4f1e8" opacity="0.5072574791032821"/><circle cx="457.8" cy="528.3" r="4.5" fill="#f4f1e8" opacity="0.7863040414988063"/><circle cx="241.4" cy="482.7" r="5.2" fill="#f4f1e8" opacity="0.7255356926703826"/><circle cx="886.0" cy="240.0" r="13.0" fill="#9ef01a" opacity="1"/></g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <text x="70" y="86" fill="#f4f1e8" font-size="20" letter-spacing="5" opacity=".9">NOXAPLUS / SPACE</text>
+  <text x="70" y="120" fill="#9ef01a" font-size="15" letter-spacing="3" opacity=".8">TECH NEWS — 07</text>
+  <text x="1130" y="86" fill="#f4f1e8" font-size="17" letter-spacing="3" text-anchor="end" opacity=".55">2026</text>
+  <text x="1130" y="620" fill="#f4f1e8" font-size="14" letter-spacing="3" text-anchor="end" opacity=".5">EDITORIAL DESK</text>
+</g>
+<rect x="0" y="0" width="1200" height="6" fill="#1f6feb"/>
+<rect x="0" y="669" width="1200" height="6" fill="#9ef01a"/>
+</svg>

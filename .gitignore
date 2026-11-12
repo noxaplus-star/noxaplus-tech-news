@@ -18,6 +18,10 @@ yarn-error.log
 dist/
 build/
 
+# Local browser test screenshots
+.preview/
+screenshots/
+
 # Local environment
 .env
 .env.local

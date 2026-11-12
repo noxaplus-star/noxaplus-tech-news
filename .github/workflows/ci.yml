@@ -1,0 +1,38 @@
+name: Validate
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    name: Static checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Syntax-check application scripts
+        run: |
+          node --check app.js
+          node --check sw.js
+          node --check assets/data/news.js
+
+      - name: Validate content, assets, metadata, and links
+        run: node scripts/check.mjs
+
+      - name: Verify generated feeds are current
+        run: |
+          node scripts/feeds.mjs
+          git diff --exit-code -- sitemap.xml feed.xml robots.txt

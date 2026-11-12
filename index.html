@@ -1,260 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NoxaPlus — Tech News (DEMO)</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Vazirmatn:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>NoxaPlus Tech News — Signals, not noise.</title>
+  <meta name="description" content="A bilingual technology newsroom about the systems, devices, and ideas that will still matter next year. Twelve original editorial samples across six desks.">
+  <meta name="author" content="NoxaPlus">
+  <link rel="canonical" href="https://noxaplus-star.github.io/noxaplus-tech-news/">
+  <meta property="og:site_name" content="NoxaPlus Tech News">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NoxaPlus Tech News — Signals, not noise.">
+  <meta property="og:description" content="A bilingual technology newsroom about the systems, devices, and ideas that will still matter next year.">
+  <meta property="og:url" content="https://noxaplus-star.github.io/noxaplus-tech-news/">
+  <meta property="og:image" content="https://noxaplus-star.github.io/noxaplus-tech-news/assets/og/default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NoxaPlus Tech News — Signals, not noise.">
+  <meta name="twitter:description" content="A bilingual technology newsroom about the systems, devices, and ideas that will still matter next year.">
+  <meta name="twitter:image" content="https://noxaplus-star.github.io/noxaplus-tech-news/assets/og/default.png">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="NoxaPlus Tech News" href="feed.xml">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var lang = localStorage.getItem('noxa_lang') === 'fa' ? 'fa' : 'en';
+        var theme = localStorage.getItem('noxa_theme');
+        if (theme !== 'dark' && theme !== 'light') {
+          theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        var html = document.documentElement;
+        html.lang = lang;
+        html.dir = lang === 'fa' ? 'rtl' : 'ltr';
+        html.dataset.lang = lang;
+        html.dataset.theme = theme;
+      } catch (error) { /* defaults are already in the markup */ }
+    })();
+  </script>
 </head>
-<body>
-
-<!-- DEMO BANNER -->
-<div class="demo-banner">
-  <span data-en="⚠️ This is a DEMO website. Visit the main site:" data-fa="⚠️ این یک وب‌سایت نمونه است. به سایت اصلی مراجعه کنید:"></span>
-  <a href="https://www.noxaplus.ir" target="_blank">www.noxaplus.ir</a>
-</div>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-inner">
-    <a href="#" class="logo">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="36" height="36" rx="8" fill="#00d4ff"/>
-        <text x="18" y="25" text-anchor="middle" font-size="18" font-weight="900" fill="#0a0f1e" font-family="Inter">N</text>
-      </svg>
-      <span>NoxaPlus</span>
-    </a>
-    <nav class="nav">
-      <a href="#" data-en="Home" data-fa="خانه">Home</a>
-      <a href="#categories" data-en="Categories" data-fa="دسته‌بندی">Categories</a>
-      <a href="#about" data-en="About" data-fa="درباره">About</a>
-      <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
-    </nav>
-    <button class="lang-toggle" id="langToggle" onclick="toggleLang()">فارسی</button>
-    <button class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</button>
-  </div>
-  <nav class="mobile-nav" id="mobileNav">
-    <a href="#" data-en="Home" data-fa="خانه">Home</a>
-    <a href="#categories" data-en="Categories" data-fa="دسته‌بندی">Categories</a>
-    <a href="#about" data-en="About" data-fa="درباره">About</a>
-    <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
-  </nav>
-</header>
-
-<!-- BREAKING NEWS TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-label" data-en="BREAKING" data-fa="خبر فوری">BREAKING</div>
-  <div class="ticker">
-    <div class="ticker-inner">
-      <span data-en="OpenAI unveils GPT-5 with unprecedented reasoning capabilities" data-fa="اوپن‌ای جی‌پی‌تی ۵ را با قابلیت‌های استدلالی بی‌سابقه معرفی کرد"></span> &nbsp;•&nbsp;
-      <span data-en="Apple announces Vision Pro 2 with 8K displays and 3-day battery life" data-fa="اپل ویژن پرو ۲ با نمایشگر ۸K و باتری ۳ روزه معرفی کرد"></span> &nbsp;•&nbsp;
-      <span data-en="SpaceX Starship completes first crewed Mars flyby mission" data-fa="اسپیس‌ایکس استارشیپ اولین ماموریت انسانی اطراف مریخ را تکمیل کرد"></span> &nbsp;•&nbsp;
-      <span data-en="Google DeepMind solves protein folding for all known life forms" data-fa="گوگل دیپ‌مایند تاخوردگی پروتئین برای تمام موجودات شناخته‌شده را حل کرد"></span> &nbsp;•&nbsp;
-      <span data-en="Samsung unveils 2nm chip architecture, 40% faster than current generation" data-fa="سامسونگ معماری چیپ ۲ نانومتری را معرفی کرد، ۴۰٪ سریع‌تر از نسل فعلی"></span>
+<body data-page="home">
+  <a class="skip-link" href="#main" id="skip-link">Skip to content</a>
+  <div id="site-header"></div>
+  <main id="main">
+    <div id="page"></div>
+  </main>
+  <noscript>
+    <div class="container" style="padding-block:48px">
+      <p><strong>NoxaPlus Tech News</strong> is a bilingual demo newsroom. JavaScript is required for this interactive edition. You can read the raw editorial data in <a href="assets/data/news.js">assets/data/news.js</a>.</p>
+      <p lang="fa" dir="rtl" style="margin-top:16px">نواپلاس تک‌نیوز یک خبرگزاری نمایشی دوزبانه است. برای این نسخهٔ تعاملی به جاوااسکریپت نیاز است. دادهٔ خام تحریریه را در <a href="assets/data/news.js">assets/data/news.js</a> بخوانید.</p>
     </div>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero container">
-  <div class="hero-card">
-    <div class="hero-img">
-      <img src="assets/hero.svg" alt="Featured" />
-      <span class="hero-tag" data-en="AI" data-fa="هوش مصنوعی">AI</span>
-    </div>
-    <div class="hero-body">
-      <div class="meta">
-        <span class="category-badge ai" data-en="Artificial Intelligence" data-fa="هوش مصنوعی">Artificial Intelligence</span>
-        <span class="date">Nov 8, 2026</span>
-      </div>
-      <h1 data-en="The Next Frontier: How AI Is Reshaping Every Industry on Earth" data-fa="مرز بعدی: چگونه هوش مصنوعی هر صنعتی را در زمین بازتعریف می‌کند">The Next Frontier: How AI Is Reshaping Every Industry on Earth</h1>
-      <p data-en="From healthcare diagnostics to autonomous vehicles, artificial intelligence is no longer a futuristic concept — it's the engine driving today's most transformative changes across every sector of the global economy." data-fa="از تشخیص پزشکی تا خودروهای خودران، هوش مصنوعی دیگر یک مفهوم آینده‌نگرانه نیست — بلکه موتور محرک تحولات امروز در هر بخش از اقتصاد جهانی است.">From healthcare diagnostics to autonomous vehicles, artificial intelligence is no longer a futuristic concept — it's the engine driving today's most transformative changes across every sector of the global economy.</p>
-      <a href="#" class="btn-read" data-en="Read Full Story →" data-fa="مطالعه کامل →">Read Full Story →</a>
-    </div>
-  </div>
-</section>
-
-<!-- MAIN CONTENT -->
-<main class="main-layout container">
-
-  <!-- NEWS GRID -->
-  <section class="news-section">
-    <h2 class="section-title" data-en="Latest Stories" data-fa="آخرین اخبار">Latest Stories</h2>
-    <div class="news-grid">
-
-      <article class="card">
-        <div class="card-img"><img src="assets/mobile.svg" alt="Mobile" /></div>
-        <div class="card-body">
-          <span class="category-badge mobile" data-en="Mobile" data-fa="موبایل">Mobile</span>
-          <h3 data-en="Samsung Galaxy S30 Leaks Reveal Foldable-Flat Hybrid Design" data-fa="لیک‌های گلکسی S30 سامسونگ طراحی هیبریدی تاشو-تخت را نشان می‌دهد">Samsung Galaxy S30 Leaks Reveal Foldable-Flat Hybrid Design</h3>
-          <p class="card-excerpt" data-en="Leaked renders show a radical new form factor combining the durability of a slate phone with the flexibility of a foldable." data-fa="رندرهای لیک‌شده یک فرم‌فاکتور جدید رادیکال را نشان می‌دهد.">Leaked renders show a radical new form factor combining the durability of a slate phone with the flexibility of a foldable.</p>
-          <div class="card-footer">
-            <span class="date">Nov 7, 2026</span>
-            <a href="#" class="btn-more" data-en="Read More" data-fa="بیشتر بخوانید">Read More</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="assets/cyber.svg" alt="Cybersecurity" /></div>
-        <div class="card-body">
-          <span class="category-badge cyber" data-en="Cybersecurity" data-fa="امنیت سایبری">Cybersecurity</span>
-          <h3 data-en="Major Zero-Day Vulnerability Found in Global Banking Software" data-fa="آسیب‌پذیری روز صفر بزرگ در نرم‌افزار بانکداری جهانی کشف شد">Major Zero-Day Vulnerability Found in Global Banking Software</h3>
-          <p class="card-excerpt" data-en="Security researchers have discovered a critical flaw affecting over 2,000 financial institutions worldwide, prompting emergency patches." data-fa="محققان امنیتی یک نقص حیاتی کشف کرده‌اند که بیش از ۲۰۰۰ موسسه مالی را تحت تأثیر قرار می‌دهد.">Security researchers have discovered a critical flaw affecting over 2,000 financial institutions worldwide, prompting emergency patches.</p>
-          <div class="card-footer">
-            <span class="date">Nov 7, 2026</span>
-            <a href="#" class="btn-more" data-en="Read More" data-fa="بیشتر بخوانید">Read More</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="assets/space.svg" alt="Space" /></div>
-        <div class="card-body">
-          <span class="category-badge space" data-en="Space" data-fa="فضا">Space</span>
-          <h3 data-en="NASA's Artemis V Crew Begins Historic 14-Day Lunar Surface Mission" data-fa="خدمه آرتمیس ۵ ناسا ماموریت تاریخی ۱۴ روزه روی سطح ماه را آغاز کرد">NASA's Artemis V Crew Begins Historic 14-Day Lunar Surface Mission</h3>
-          <p class="card-excerpt" data-en="Four astronauts have successfully landed near the lunar south pole, beginning the longest crewed stay on the Moon in history." data-fa="چهار فضانورد با موفقیت در نزدیکی قطب جنوب ماه فرود آمدند.">Four astronauts have successfully landed near the lunar south pole, beginning the longest crewed stay on the Moon in history.</p>
-          <div class="card-footer">
-            <span class="date">Nov 6, 2026</span>
-            <a href="#" class="btn-more" data-en="Read More" data-fa="بیشتر بخوانید">Read More</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="assets/software.svg" alt="Software" /></div>
-        <div class="card-body">
-          <span class="category-badge software" data-en="Software" data-fa="نرم‌افزار">Software</span>
-          <h3 data-en="Microsoft Releases Windows 12 with Native AI Co-Pilot Built In" data-fa="مایکروسافت ویندوز ۱۲ را با دستیار هوش مصنوعی داخلی منتشر کرد">Microsoft Releases Windows 12 with Native AI Co-Pilot Built In</h3>
-          <p class="card-excerpt" data-en="The new OS features deep AI integration, adaptive UI, and a completely redesigned settings architecture for enterprise and home users." data-fa="سیستم‌عامل جدید دارای یکپارچگی عمیق هوش مصنوعی و رابط کاربری تطبیقی است.">The new OS features deep AI integration, adaptive UI, and a completely redesigned settings architecture for enterprise and home users.</p>
-          <div class="card-footer">
-            <span class="date">Nov 5, 2026</span>
-            <a href="#" class="btn-more" data-en="Read More" data-fa="بیشتر بخوانید">Read More</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="assets/hardware.svg" alt="Hardware" /></div>
-        <div class="card-body">
-          <span class="category-badge hardware" data-en="Hardware" data-fa="سخت‌افزار">Hardware</span>
-          <h3 data-en="NVIDIA's RTX 6090 Benchmarks: 3× the Performance of Its Predecessor" data-fa="بنچمارک RTX 6090 انویدیا: ۳ برابر عملکرد نسل قبل">NVIDIA's RTX 6090 Benchmarks: 3× the Performance of Its Predecessor</h3>
-          <p class="card-excerpt" data-en="Early benchmarks of NVIDIA's next-gen flagship GPU show staggering gains in both rasterization and ray tracing workloads." data-fa="بنچمارک‌های اولیه GPU پرچم‌دار نسل بعدی انویدیا پیشرفت‌های شگفت‌انگیزی نشان می‌دهد.">Early benchmarks of NVIDIA's next-gen flagship GPU show staggering gains in both rasterization and ray tracing workloads.</p>
-          <div class="card-footer">
-            <span class="date">Nov 4, 2026</span>
-            <a href="#" class="btn-more" data-en="Read More" data-fa="بیشتر بخوانید">Read More</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-img"><img src="assets/ai2.svg" alt="AI" /></div>
-        <div class="card-body">
-          <span class="category-badge ai" data-en="AI" data-fa="هوش مصنوعی">AI</span>
-          <h3 data-en="Meta's New AI Model Can Generate Full 3D Environments in Real Time" data-fa="مدل هوش مصنوعی جدید متا می‌تواند محیط‌های سه‌بعدی کامل را در لحظه تولید کند">Meta's New AI Model Can Generate Full 3D Environments in Real Time</h3>
-          <p class="card-excerpt" data-en="Meta has unveiled a groundbreaking generative AI system capable of creating photorealistic 3D worlds from a single text prompt." data-fa="متا یک سیستم هوش مصنوعی مولد پیشرفته معرفی کرد که قادر است دنیاهای سه‌بعدی فتورئالیستی از یک پرامپت متنی بسازد.">Meta has unveiled a groundbreaking generative AI system capable of creating photorealistic 3D worlds from a single text prompt.</p>
-          <div class="card-footer">
-            <span class="date">Nov 3, 2026</span>
-            <a href="#" class="btn-more" data-en="Read More" data-fa="بیشتر بخوانید">Read More</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar" id="categories">
-    <div class="sidebar-widget">
-      <h3 data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</h3>
-      <ul class="cat-list">
-        <li><a href="#"><span class="cat-dot ai"></span><span data-en="Artificial Intelligence" data-fa="هوش مصنوعی">Artificial Intelligence</span><em>42</em></a></li>
-        <li><a href="#"><span class="cat-dot mobile"></span><span data-en="Mobile" data-fa="موبایل">Mobile</span><em>38</em></a></li>
-        <li><a href="#"><span class="cat-dot cyber"></span><span data-en="Cybersecurity" data-fa="امنیت سایبری">Cybersecurity</span><em>29</em></a></li>
-        <li><a href="#"><span class="cat-dot space"></span><span data-en="Space" data-fa="فضا">Space</span><em>21</em></a></li>
-        <li><a href="#"><span class="cat-dot software"></span><span data-en="Software" data-fa="نرم‌افزار">Software</span><em>55</em></a></li>
-        <li><a href="#"><span class="cat-dot hardware"></span><span data-en="Hardware" data-fa="سخت‌افزار">Hardware</span><em>33</em></a></li>
-      </ul>
-    </div>
-
-    <div class="sidebar-widget trending">
-      <h3 data-en="Trending" data-fa="ترند">Trending</h3>
-      <ol class="trend-list">
-        <li><a href="#" data-en="Elon Musk's xAI Raises $20B at $200B Valuation" data-fa="xAI ایلان ماسک ۲۰ میلیارد دلار با ارزش‌گذاری ۲۰۰ میلیارد دلار جذب کرد">Elon Musk's xAI Raises $20B at $200B Valuation</a></li>
-        <li><a href="#" data-en="The Death of the Smartphone? Wearable AI Takes Over" data-fa="مرگ گوشی هوشمند؟ هوش مصنوعی پوشیدنی تسخیر می‌کند">The Death of the Smartphone? Wearable AI Takes Over</a></li>
-        <li><a href="#" data-en="Quantum Internet: First Intercontinental Test Succeeds" data-fa="اینترنت کوانتومی: اولین آزمایش بین‌قاره‌ای موفق شد">Quantum Internet: First Intercontinental Test Succeeds</a></li>
-        <li><a href="#" data-en="Tesla Bot 3.0 Now Available for Pre-Order at $29,999" data-fa="تسلا بات ۳.۰ اکنون برای پیش‌سفارش با قیمت ۲۹,۹۹۹ دلار موجود است">Tesla Bot 3.0 Now Available for Pre-Order at $29,999</a></li>
-        <li><a href="#" data-en="Apple Intelligence Gets Memory: Remembers Everything You've Done" data-fa="اپل اینتلیجنس حافظه می‌گیرد: همه چیز را به یاد می‌آورد">Apple Intelligence Gets Memory: Remembers Everything You've Done</a></li>
-      </ol>
-    </div>
-
-    <div class="sidebar-widget newsletter" id="contact">
-      <h3 data-en="Stay Updated" data-fa="به‌روز بمانید">Stay Updated</h3>
-      <p data-en="Get the latest tech news delivered to your inbox." data-fa="آخرین اخبار فناوری را در صندوق ورودی خود دریافت کنید.">Get the latest tech news delivered to your inbox.</p>
-      <form onsubmit="return false">
-        <input type="email" placeholder="" id="emailInput" data-en-placeholder="Your email address" data-fa-placeholder="آدرس ایمیل شما" />
-        <button type="submit" data-en="Subscribe" data-fa="عضویت">Subscribe</button>
-      </form>
-    </div>
-  </aside>
-
-</main>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="container">
-    <h2 data-en="About NoxaPlus" data-fa="درباره نوکساپلاس">About NoxaPlus</h2>
-    <p data-en="NoxaPlus is your go-to source for cutting-edge technology news, in-depth reviews, and expert analysis. We cover AI, mobile, cybersecurity, space exploration, software, and hardware — keeping you ahead of the curve." data-fa="نوکساپلاس منبع اصلی شما برای اخبار فناوری پیشرفته، بررسی‌های عمیق و تحلیل‌های تخصصی است. ما هوش مصنوعی، موبایل، امنیت سایبری، اکتشاف فضا، نرم‌افزار و سخت‌افزار را پوشش می‌دهیم.">NoxaPlus is your go-to source for cutting-edge technology news, in-depth reviews, and expert analysis. We cover AI, mobile, cybersecurity, space exploration, software, and hardware — keeping you ahead of the curve.</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="logo">
-        <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#00d4ff"/><text x="18" y="25" text-anchor="middle" font-size="18" font-weight="900" fill="#0a0f1e" font-family="Inter">N</text></svg>
-        <span>NoxaPlus</span>
-      </a>
-      <p data-en="Your trusted source for technology news." data-fa="منبع مورد اعتماد شما برای اخبار فناوری.">Your trusted source for technology news.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Twitter" class="social">𝕏</a>
-        <a href="#" aria-label="Telegram" class="social">✈</a>
-        <a href="#" aria-label="Instagram" class="social">◈</a>
-      </div>
-    </div>
-    <div class="footer-links">
-      <h4 data-en="Categories" data-fa="دسته‌بندی‌ها">Categories</h4>
-      <a href="#" data-en="Artificial Intelligence" data-fa="هوش مصنوعی">Artificial Intelligence</a>
-      <a href="#" data-en="Mobile" data-fa="موبایل">Mobile</a>
-      <a href="#" data-en="Cybersecurity" data-fa="امنیت سایبری">Cybersecurity</a>
-      <a href="#" data-en="Space" data-fa="فضا">Space</a>
-      <a href="#" data-en="Software" data-fa="نرم‌افزار">Software</a>
-      <a href="#" data-en="Hardware" data-fa="سخت‌افزار">Hardware</a>
-    </div>
-    <div class="footer-links">
-      <h4 data-en="Company" data-fa="شرکت">Company</h4>
-      <a href="#about" data-en="About Us" data-fa="درباره ما">About Us</a>
-      <a href="#contact" data-en="Contact" data-fa="تماس">Contact</a>
-      <a href="#" data-en="Privacy Policy" data-fa="سیاست حریم خصوصی">Privacy Policy</a>
-      <a href="#" data-en="Terms of Service" data-fa="شرایط استفاده">Terms of Service</a>
-    </div>
-    <div class="footer-dev">
-      <h4 data-en="Developer & Ads" data-fa="توسعه‌دهنده و تبلیغات">Developer & Ads</h4>
-      <p data-en="Developed & Advertised by" data-fa="توسعه‌یافته و تبلیغ‌شده توسط">Developed & Advertised by</p>
-      <strong>NoxaPlus</strong>
-      <a href="https://www.noxaplus.ir" target="_blank">www.noxaplus.ir</a>
-      <a href="tel:09198690446">📞 09198690446</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 NoxaPlus. <span data-en="All rights reserved." data-fa="تمام حقوق محفوظ است.">All rights reserved.</span> &nbsp;|&nbsp; <span data-en="DEMO SITE" data-fa="سایت نمونه">DEMO SITE</span></p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  </noscript>
+  <div id="site-footer"></div>
+  <script src="assets/data/news.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

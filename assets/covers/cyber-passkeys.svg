@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t">
+<title id="t">CYBER cover 05 — NoxaPlus Tech News</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#190a0b"/>
+    <stop offset="1" stop-color="#2a1012"/>
+  </linearGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.1" fill="#f4f1e8" opacity=".12"/>
+  </pattern>
+</defs>
+<rect width="1200" height="675" fill="url(#g)"/>
+<rect width="1200" height="675" fill="url(#dots)"/>
+<g><circle cx="600.0" cy="300.0" r="175.0" fill="#e5484d" opacity="0.16"/><circle cx="600.0" cy="300.0" r="118.0" fill="#e5484d" opacity="0.85"/><circle cx="600.0" cy="290.0" r="58.0" fill="#190a0b" opacity="1"/><polygon points="588,330 612,330 632,470 568,470" fill="#190a0b" opacity="1"/><line x1="90.0" y1="560.0" x2="1110.0" y2="520.0" stroke="#ffd166" stroke-width="1" opacity="0.15"/><line x1="90.0" y1="570.0" x2="1110.0" y2="530.0" stroke="#ffd166" stroke-width="1" opacity="0.15"/><line x1="90.0" y1="580.0" x2="1110.0" y2="540.0" stroke="#ffd166" stroke-width="1" opacity="0.15"/><line x1="90.0" y1="590.0" x2="1110.0" y2="550.0" stroke="#ffd166" stroke-width="1" opacity="0.15"/><line x1="90.0" y1="600.0" x2="1110.0" y2="560.0" stroke="#ffd166" stroke-width="1" opacity="0.15"/><line x1="90.0" y1="610.0" x2="1110.0" y2="570.0" stroke="#ffd166" stroke-width="1" opacity="0.15"/></g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <text x="70" y="86" fill="#f4f1e8" font-size="20" letter-spacing="5" opacity=".9">NOXAPLUS / CYBER</text>
+  <text x="70" y="120" fill="#ffd166" font-size="15" letter-spacing="3" opacity=".8">TECH NEWS — 05</text>
+  <text x="1130" y="86" fill="#f4f1e8" font-size="17" letter-spacing="3" text-anchor="end" opacity=".55">2026</text>
+  <text x="1130" y="620" fill="#f4f1e8" font-size="14" letter-spacing="3" text-anchor="end" opacity=".5">EDITORIAL DESK</text>
+</g>
+<rect x="0" y="0" width="1200" height="6" fill="#e5484d"/>
+<rect x="0" y="669" width="1200" height="6" fill="#ffd166"/>
+</svg>
