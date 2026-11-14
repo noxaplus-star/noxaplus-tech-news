@@ -18,10 +18,10 @@
   var authors = DATA.authors;
   var articles = DATA.articles;
 
-  var CAT = {};
+  var CAT = Object.create(null);
   categories.forEach(function (c) { CAT[c.id] = c; });
 
-  var ARTICLE_BY_SLUG = {};
+  var ARTICLE_BY_SLUG = Object.create(null);
   articles.forEach(function (a) { ARTICLE_BY_SLUG[a.slug] = a; });
 
   var LS = {
@@ -743,14 +743,29 @@
       '</div></section>';
   }
 
+  function foldSearchText(value, offsets) {
+    var text = '';
+    var index = 0;
+    // Fold code points, but retain UTF-16 slice offsets into the original text.
+    Array.from(String(value || '')).forEach(function (character) {
+      var end = index + character.length;
+      var folded = character.toLocaleLowerCase()
+        .replace(/[يى]/g, 'ی')
+        .replace(/ك/g, 'ک')
+        .replace(/[\u064B-\u065F\u0670]/g, '');
+      if (offsets) {
+        for (var i = 0; i < folded.length; i += 1) offsets.push({ start: index, end: end });
+        // Keep trailing diacritics with the highlighted character they belong to.
+        if (!folded && offsets.length) offsets[offsets.length - 1].end = end;
+      }
+      text += folded;
+      index = end;
+    });
+    return text;
+  }
+
   function normalize(value) {
-    return String(value || '')
-      .toLocaleLowerCase()
-      .replace(/[يى]/g, 'ی')
-      .replace(/ك/g, 'ک')
-      .replace(/[\u064B-\u065F\u0670]/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
+    return foldSearchText(value).replace(/\s+/g, ' ').trim();
   }
 
   function blockText(block) {
@@ -781,22 +796,22 @@
 
   function highlight(value, query) {
     var raw = String(value || '');
-    var terms = query.trim().split(/\s+/).filter(Boolean);
+    var terms = normalize(query).split(' ').filter(Boolean);
     if (!terms.length) return esc(raw);
-    var re;
-    try {
-      re = new RegExp('(' + terms.map(escapeRegExp).join('|') + ')', 'gi');
-    } catch (error) {
-      return esc(raw);
-    }
+    terms.sort(function (a, b) { return b.length - a.length; });
+    var re = new RegExp(terms.map(escapeRegExp).join('|'), 'g');
+    var offsets = [];
+    var folded = foldSearchText(raw, offsets);
     var out = '';
     var last = 0;
     var match;
-    while ((match = re.exec(raw)) !== null) {
-      if (match.index > last) out += esc(raw.slice(last, match.index));
-      out += '<mark>' + esc(match[0]) + '</mark>';
-      last = match.index + match[0].length;
-      if (!match[0].length) re.lastIndex += 1;
+    while ((match = re.exec(folded)) !== null) {
+      var start = offsets[match.index].start;
+      var end = offsets[match.index + match[0].length - 1].end;
+      if (start < last) continue;
+      out += esc(raw.slice(last, start));
+      out += '<mark>' + esc(raw.slice(start, end)) + '</mark>';
+      last = end;
     }
     out += esc(raw.slice(last));
     return out;

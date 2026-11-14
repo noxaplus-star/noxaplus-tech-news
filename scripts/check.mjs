@@ -183,6 +183,15 @@ for (const page of pages) {
   }
 }
 
+/* ---------- Nested 404 deployment base and static fallback ---------- */
+const notFound = read('404.html');
+const baseHref = notFound.match(/<base href="([^"]+)"/);
+if (!baseHref || baseHref[1] !== new URL(site.url).pathname) {
+  fail('404.html deployment base must match site.url in assets/data/news.js');
+}
+if (notFound.indexOf('<base ') > notFound.indexOf('<link rel="icon"')) fail('404.html must set its base before loading relative assets');
+if (!/<div id="page"[^>]*>\s*<section class="error-page">/.test(notFound)) fail('404.html needs a visible static fallback');
+
 /* ---------- app.js asset references ---------- */
 const app = read('app.js');
 for (const match of app.matchAll(/(?:'|")(assets\/[^'"]+)(?:'|")/g)) {
@@ -197,6 +206,32 @@ if (/https?:\/\/(?:fonts|cdn|unpkg|cdnjs|jsdelivr)/i.test(app) || /https?:\/\/(?
 }
 if (!/nothing is sent anywhere|هیچ‌جا ارسال نمی‌شود/i.test(app)) fail('newsletter demo disclosure missing');
 
+/* ---------- Search folding, original offsets, and escaping ---------- */
+const searchSandbox = {};
+const searchHelpers = ['esc', 'escapeRegExp', 'foldSearchText', 'normalize', 'highlight'].map((name) => {
+  const source = app.match(new RegExp('  function ' + name + '\\([^]*?\\n  }'));
+  if (!source) throw new Error('Missing search helper: ' + name);
+  return source[0];
+});
+vm.runInNewContext(searchHelpers.join('\n'), searchSandbox);
+const highlightCases = [
+  ['Persian letter variants', 'باتری', 'باتري', '<mark>باتری</mark>'],
+  ['Arabic letter variants', 'كيى', 'کیی', '<mark>كيى</mark>'],
+  ['diacritics and offsets', 'الف بَاتریِ بعد', 'باتري', 'الف <mark>بَاتریِ</mark> بعد'],
+  ['English case', 'Battery BATTERY', 'battery', '<mark>Battery</mark> <mark>BATTERY</mark>'],
+  ['longest term first', 'battery', 'bat battery', '<mark>battery</mark>'],
+  ['literal regex and HTML', '<b>A+B & "x"</b>', 'a+b &', '&lt;b&gt;<mark>A+B</mark> <mark>&amp;</mark> &quot;x&quot;&lt;/b&gt;'],
+  ['HTML in query', '<img onerror=x>', '<img', '<mark>&lt;img</mark> onerror=x&gt;'],
+  ['empty folded query', '<b>باتری</b>', '\u064E', '&lt;b&gt;باتری&lt;/b&gt;'],
+  ['UTF-16 offsets', '\u{1F680} باتری', 'باتري', '\u{1F680} <mark>باتری</mark>'],
+  ['lowercase expansion', '\u0130 bat', 'i bat', '<mark>\u0130</mark> <mark>bat</mark>']
+];
+for (const [name, value, query, expected] of highlightCases) {
+  if (searchSandbox.highlight(value, query) !== expected) fail(`search highlight: ${name}`);
+}
+if (searchSandbox.normalize('  كِيى\n BATTERY  ') !== 'کیی battery') fail('search normalization changed');
+note(`${highlightCases.length} search highlight regressions`);
+
 /* ---------- Service worker ---------- */
 const sw = read('sw.js');
 const precacheEntries = [...sw.matchAll(/'([^']+\.(?:html|css|js|webmanifest|svg|png|woff2|xml))'/g)].map((m) => m[1]);
@@ -207,6 +242,31 @@ else {
   note(`service worker precaches ${precacheEntries.length} files`);
 }
 if (!/VERSION/.test(sw) || !/fetch/.test(sw)) fail('sw.js is missing cache versioning or a fetch handler');
+const workerEvents = {};
+const cacheNames = new Set(['sibling-app-v1', 'other-noxa-news-v1', 'noxa-news-v2', 'noxa-news-v3']);
+let claimed = false;
+const workerSandbox = {
+  self: {
+    addEventListener: (name, callback) => { workerEvents[name] = callback; },
+    clients: { claim: async () => { claimed = true; } }
+  },
+  caches: {
+    keys: async () => [...cacheNames],
+    delete: async (name) => cacheNames.delete(name)
+  }
+};
+vm.runInNewContext(sw, workerSandbox);
+if (workerSandbox.CACHE_PREFIX !== 'noxa-news-' || !workerSandbox.VERSION.startsWith('noxa-news-') || workerSandbox.VERSION === 'noxa-news-v3') {
+  fail('service worker must retain its cache namespace and advance beyond v3');
+}
+cacheNames.add(workerSandbox.VERSION);
+let activation;
+workerEvents.activate({ waitUntil: (promise) => { activation = promise; } });
+await activation;
+if (!claimed || cacheNames.size !== 3 || !['sibling-app-v1', 'other-noxa-news-v1', workerSandbox.VERSION].every((name) => cacheNames.has(name))) {
+  fail('service worker activation must remove only obsolete own caches and claim clients');
+}
+note('service worker activation preserves sibling caches');
 
 /* ---------- Feeds and sitemap ---------- */
 const sitemap = read('sitemap.xml');

@@ -4,7 +4,8 @@
  */
 'use strict';
 
-var VERSION = 'noxa-news-v3';
+var CACHE_PREFIX = 'noxa-news-';
+var VERSION = CACHE_PREFIX + 'v4';
 var SHELLS = ['index.html', 'article.html', 'category.html', 'search.html', 'bookmarks.html', 'about.html', '404.html'];
 
 var PRECACHE = SHELLS.concat([
@@ -50,7 +51,7 @@ self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(keys.filter(function (key) {
-        return key !== VERSION;
+        return key.indexOf(CACHE_PREFIX) === 0 && key !== VERSION;
       }).map(function (key) {
         return caches.delete(key);
       }));

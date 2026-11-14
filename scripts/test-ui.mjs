@@ -1,13 +1,18 @@
 /*
  * Browser smoke test for NoxaPlus Tech News.
- * Assumes Chrome was started with --remote-debugging-port=9222 and the site is
- * served at http://127.0.0.1:4173. Not part of CI; run it locally after changes.
+ * Use an isolated Chrome profile with remote debugging and a local static server
+ * that serves 404.html (status 404) for missing paths. Defaults: port 9222 and
+ * http://127.0.0.1:4173/. Override with NOXA_CDP_PORT and NOXA_BASE.
+ * Run against both root and deployment-subpath mounts. Not part of CI.
+ * Screenshots go to a temporary directory unless NOXA_SHOTS is supplied.
  */
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
-const PORT = 9222;
-const BASE = 'http://127.0.0.1:4173/';
-const OUT = process.env.NOXA_SHOTS || 'C:/Users/Mohammad Sadegh/GitHub Projects/noxaplus-tech-news/.preview';
+const PORT = Number(process.env.NOXA_CDP_PORT || 9222);
+const BASE = (process.env.NOXA_BASE || 'http://127.0.0.1:4173/').replace(/\/?$/, '/');
+const OUT = process.env.NOXA_SHOTS || mkdtempSync(join(tmpdir(), 'noxa-ui-shots-'));
 mkdirSync(OUT, { recursive: true });
 
 const target = await (await fetch(`http://127.0.0.1:${PORT}/json/new?about:blank`, { method: 'PUT' })).json();
