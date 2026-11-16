@@ -5,7 +5,7 @@
 'use strict';
 
 var CACHE_PREFIX = 'noxa-news-';
-var VERSION = CACHE_PREFIX + 'v4';
+var VERSION = CACHE_PREFIX + 'v5';
 var SHELLS = ['index.html', 'article.html', 'category.html', 'search.html', 'bookmarks.html', 'about.html', '404.html'];
 
 var PRECACHE = SHELLS.concat([
@@ -14,6 +14,8 @@ var PRECACHE = SHELLS.concat([
   'app.js',
   'manifest.webmanifest',
   'assets/data/news.js',
+  'assets/brand/mark-dark.png',
+  'assets/brand/mark-light.png',
   'assets/icons/favicon.svg',
   'assets/icons/icon-192.png',
   'assets/icons/icon-512.png',

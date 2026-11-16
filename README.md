@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/brand.png" alt="NoxaPlus" width="520"></p>
+
 # NoxaPlus Tech News
 
 **Signals, not noise.** A bilingual, open-source technology newsroom template — designed and developed by [NoxaPlus](https://www.noxaplus.ir).

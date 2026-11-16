@@ -355,11 +355,10 @@
   /* ---------- Small UI fragments ---------- */
 
   function logoSVG(cls) {
-    return '<svg class="' + (cls || 'brand-mark') + '" viewBox="0 0 48 48" aria-hidden="true" focusable="false">' +
-      '<rect width="48" height="48" rx="5" fill="#12130f"/>' +
-      '<path d="M11 37V11h6.4L30.6 28V11H37v26h-6.4L17 19.5V37z" fill="#d8ff3e"/>' +
-      '<rect x="36" y="3" width="9" height="9" fill="#d8ff3e"/>' +
-      '</svg>';
+    return '<span class="' + (cls || 'brand-mark') + ' brand-emblem">' +
+      '<img class="brand-emblem__img brand-emblem__img--dark" src="assets/brand/mark-dark.png" alt="NoxaPlus">' +
+      '<img class="brand-emblem__img brand-emblem__img--light" src="assets/brand/mark-light.png" alt="" aria-hidden="true">' +
+      '</span>';
   }
 
   function badge(cat, plain) {

@@ -2,6 +2,13 @@
 
 All notable changes to NoxaPlus Tech News are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [2.0.1] — 2026-11-16
+
+### Changed
+
+- The masthead, footer, about strip, and development card now use the original NoxaPlus emblem, with a light variant for the dark theme.
+- The service worker shell version is bumped so offline visitors receive the new brand assets.
+
 ## [2.0.0] — 2026-11-12
 
 A complete rebuild: new editorial identity, real multi-page architecture, bilingual content, and a production-ready static newsroom.
